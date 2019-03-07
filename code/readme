@@ -1,1 +1,14 @@
 This is the Arduino-IDE-Sketch for the TTN-Node...
+
+It is necessary to fill in the proper values for APPEUI, DEVEUI an APPKEY in the sketch, search for the following section...
+
+
+
+//OTAA (DevEUI=LSB, APPEUI=LSB, AppKey=MSB)#############
+  static const u1_t PROGMEM APPEUI[8]={ "fill in with your values" };
+  void os_getArtEui (u1_t* buf) { memcpy_P(buf, APPEUI, 8);}
+  static const u1_t PROGMEM DEVEUI[8]={ "fill in with your values" };
+  void os_getDevEui (u1_t* buf) { memcpy_P(buf, DEVEUI, 8);}
+  static const u1_t PROGMEM APPKEY[16] = { "fill in with your values" };
+  void os_getDevKey (u1_t* buf) {  memcpy_P(buf, APPKEY, 16);}
+//OTAA (DevEUI=LSB, APPEUI=LSB, AppKey=MSB)#############
