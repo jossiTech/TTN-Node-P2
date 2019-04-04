@@ -4,7 +4,8 @@
 * It is necessary to fill in the proper values for APPEUI, DEVEUI an APPKEY in the sketch, search for the following section...
 * In the Arduino IDE under Tools / Board you must select "Adafruit Feather 32U4"
 * The used libraries in the sketch must be available for compiling:
-  lmic.h
+
+  lmic.h (I recommend library from https://github.com/mcci-catena/arduino-lorawan/#get-deveui-appeui-appkey)
   hal/hal.h
   CayenneLPP.h
   OneWire.h
